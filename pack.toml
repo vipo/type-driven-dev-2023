@@ -1,10 +1,10 @@
-[custom.all.tdd-2023]
+[custom.all.type-driven-dev-2023]
 type = "local"
 path = "."
-ipkg = "tdd-2023.ipkg"
+ipkg = "type-driven-dev-2023.ipkg"
 test = "test/test.ipkg"
 
-[custom.all.tdd-2023-test]
+[custom.all.type-driven-dev-2023-test]
 type = "local"
 path = "test"
 ipkg = "test.ipkg"
