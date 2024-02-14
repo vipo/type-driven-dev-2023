@@ -5,7 +5,7 @@ import Data.Vect
 %default total
 
 tup : (Int, Bool, Double, Integer)
-tup = (1, True, 1.0, 42)
+tup = (1, ?nested)
 
 io : IO ()
 io = putStrLn "Labas"
