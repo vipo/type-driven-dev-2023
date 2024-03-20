@@ -102,3 +102,20 @@ getEntry : (pos : Integer) -> (dataStore: DataStore) -> Maybe String
 getEntry pos dataStore = case integerToFin pos (size dataStore) of
                               Nothing => Nothing
                               (Just x) => Just(display(index x (items dataStore)))
+
+data Command : Schema -> Type where
+    Add : (s: Schema) -> SchemaType s -> Command s
+
+processCommand : (ds: DataStore) -> (Command (ds.schema)) -> Maybe (String, DataStore)
+processCommand ds x = ?processCommand_rhs
+--processCommand ds (Add (ds.schema) x) = ?processCommand_rhs_0 
+--processCommand ds (Add s x) = ?processCommand_rhs_0
+--processCommand {schema = schema} (MkData _ size items) (Add schema x) = ?processCommand_rhs_1
+-- processCommand x (Get i) = case getEntry i x of
+--                                 Nothing => Just ("Invalid index\n", x)
+--                                 (Just v) => Just (v ++ "\n", x)
+-- processCommand x (Search str) = case searchItems (items x) str 0 of
+--                                      Nothing => Just ("Not found\n", x)
+--                                      (Just (i, v)) => Just ("Found \"" ++ v ++ "\" at " ++ show i ++ "\n", x)
+-- processCommand _ Quit = Nothing
+-- processCommand x Size = Just ((show $ length $ items x) ++ "\n", x)
